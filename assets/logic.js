@@ -1,21 +1,3 @@
-// Setup calendar
-    // HTML table; 9AM - 5PM.
-        //  3 columns:
-            //Hour
-                //Give value == hour label
-            //Notes/Tasks
-                //Form --> Label (give value) --> Input
-            //Submit btn
-                //Submit btn = local storage & refresh page (setItem)
-                    //Load page = retrieve storage & display (getItem)
-// Conditional Formatting of colors
-    //past hours = grey
-    //present = red
-    //future = green
-
-
-//EXAMPLE FORMAT:: const hour = moment().format('HH:mm:ss')
-
 var hour = document.querySelector(".hour");
 var task = document.querySelectorAll(".task");
 var input = document.querySelectorAll("input");
@@ -32,7 +14,8 @@ var background = document.querySelector(".background")
 var wrapper = document.querySelector(".wrapper")
 var container = document.querySelector(".container")
 var monthCalendar = document.querySelector(".current-month")
-var location = document.querySelector(".location")
+var local = document.querySelector(".location")
+var closeBtn = document.querySelector(".fa-times")
 
 console.log(task)
 console.log(img)
@@ -41,7 +24,7 @@ console.log(img)
 
 function todaysDate(){
     var today = moment().format("dddd, MMMM Do YYYY");
-    todayDisplay.textContent = today
+    todayDisplay.innerHTML = today + "            " + '<i class="fas fa-calendar-alt" style="font-size: 20px">';
     console.log(today)
 }
 todaysDate()
@@ -96,18 +79,33 @@ function weatherDisplay(lat, lon) {
         var Farenheit = Math.floor((Kelvin - 273.15) * 9/5 + 32)
         console.log(Farenheit)
         weather.textContent = Farenheit + "°"
-        location.textContent = City
+        local.textContent = City + ", WA"
 
-        // var forecast = response.weather[0].main
-        // console.log(forecast);
-        // console.log(background)
-        // if(forecast === "clouds"){
-        //     console.log(backgroun)
-        //     background.setAttribute("style", "background-image: url('https://lh3.googleusercontent.com/proxy/9fdMVDtFQSxDqVNmWZYArxR4m-Yl4wZ5egW2M_OvikUM1g7n6hjBcjcOjydASQV-odeX7Vp04likSlfEJDhFo78_CJCvTsPCTnQhepnQ7G8XBEm0DRisPjFTSZeTI7_4Eh4C')")
-        // }
-        // else{
-        //     background.setAttribute("style", "background-image: url('https://taijionmaui.files.wordpress.com/2011/10/blue-sky.jpg') ")
-        // }
+        console.log(response)
+
+        var forecast = response.list[0].weather[0].main
+        console.log(forecast);
+        console.log(response.list[0].weather[0].main)
+        if(hourTime > 6 && hourTime < 18 && forecast === "Clouds"){
+            //Cloudy pic
+            document.querySelector('main').setAttribute("style", "background-image: url('https://c1.wallpaperflare.com/preview/399/588/997/air-sky-cloud-background.jpg')")
+            }
+        else if (hourTime > 6 && hourTime < 18 && forecast === "Rain"){
+            //Rainy pic
+            document.querySelector('main').setAttribute("style", "background-image: url('https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1563556593000/photosp/1ff6c1b0-139b-42c2-b1af-a6096aa3d847/stock-photo-water-wet-raindrop-glass-liquid-moist-surface-aqua-background-1ff6c1b0-139b-42c2-b1af-a6096aa3d847.jpg')")
+            }
+        else if (hourTime > 6 && hourTime < 18 && forecast === "Clear"){
+            //Sunny pic
+            document.querySelector('main').setAttribute("style", "background-image: url('https://wallpaperplay.com/walls/full/5/8/5/76997.jpg')")  
+            }
+        else {
+             //Night pic
+             document.querySelector('main').setAttribute("style", "background-image: url('https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_US/ug37e-PZBJNCA7CB8-Full-Image_GalleryBackground-en-US-1522432141586._SX1080_.jpg')") 
+            }
+
+        
+
+        console.log(forecast == 'Clear')
     })
 }
 
@@ -167,12 +165,12 @@ backGroundColor();
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////    BUTTON FUNCTIONS    ///////////////////////////////////////////////////////////////
+////////////////////////////////    BUTTON FUNCTIONS TO SAVE TEXT//////////////////////////////////////////////////////
 
 const day = moment().format('dddd, MMMM Do YYYY');
 const month = moment().format('MMMM YYYY')
 
-let tasks  = []
+let tasks = []
 
 //9
 const addTask9 = (event)=>{
@@ -318,6 +316,7 @@ const addTask14 = (event)=>{
         id: day + "  " +    document.querySelector('#hour14').textContent,
         planner: document.getElementById('14').value,
     }
+
     tasks.push(taskDay);
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -420,22 +419,50 @@ document.addEventListener('DOMContentLoaded', function(){
 
 })
 
+//////////////////////////////////SUB-FUNCTION TO DISPLAY TEXT////////////////////////////////////////////////////////////////////////////////////
+
+
+// var arrayRaw = localStorage.getItem("tasks")
+// console.log(arrayRaw)
+// var array = JSON.parse(arrayRaw)
+// console.log(array)
+// // console.log(array[0].planner)
+// console.log(array.length)
+
+// for(var i = 0; i < array.length; i++){
+//     // if (array[i]+9)
+//     console.log(array[i].id)
+// }
+
+
+// function retrieveValue9() {
+//     // document.getElementById('9').innerHTML = array[0].planner;
+// }
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////  POPUP CALENDAR  ///////////////////////////////////////////////////////////////////////
 
 
-todayDisplay.addEventListener("mouseover", function(){
-    wrapper.setAttribute("style", "display: grid");
-    container.setAttribute("style", "display: none");
-    monthCalendar.textContent = month
-})
-todayDisplay.addEventListener("mouseout", function(){
-    wrapper.setAttribute("style", "display: none");
-    container.setAttribute("style", "display: grid");
-    // monthCalendar.textContent = month
-})
 todayDisplay.addEventListener("click", function(){
     wrapper.setAttribute("style", "display: grid");
     container.setAttribute("style", "display: none");
     monthCalendar.textContent = month
 })
+
+closeBtn.addEventListener("click", function(){
+    wrapper.setAttribute("style", "display: now");
+    container.setAttribute("style", "display: inline-text");
+})
+
+// todayDisplay.addEventListener("mouseout", function(){
+//     wrapper.setAttribute("style", "display: none");
+//     container.setAttribute("style", "display: grid");
+//     // monthCalendar.textContent = month
+// })
+

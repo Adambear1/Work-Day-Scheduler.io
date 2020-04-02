@@ -20,7 +20,7 @@
       <div class="sub-header">
         <button><p id="currentDay" class="lead"></p></button> 
       </div>
-      <div><p class="location" style="position: absolute; right: 65px; top: 12px; font-size: 15px"></p><p class="weather" style="position: absolute; right: 35px; top: 12px; font-size: 15px"></p><i class="fas fa-cloud-sun" style="position: absolute; right: 10px; top: 10px;"></i></div>
+      <div><p class="location"></p><p class="weather" style="position: absolute; right: 35px; top: 12px; font-size: 15px"></p><i class="fas fa-cloud-sun" style="position: absolute; right: 10px; top: 10px;"></i></div>
     </header>
     <!--  -->
     <div class="wrapper">
@@ -30,9 +30,10 @@
             <!-- <div class="toggle__option">week</div>
             <div class="toggle__option toggle__option--selected">month</div> -->
           </div>
-          <div class="current-month"></div>
+          <div class="current-month"><!-- switch to moment--></div>
           <div class="search-input">
-            <i class="fas fa-times" style="color: white !important; font-size: 30px;"></i>
+            <!-- <input type="text" value="What are you looking for?"> -->
+            <i class="fa fa-search"></i>
           </div>
         </div>
         <div class="calendar">
@@ -106,7 +107,7 @@
         <tbody>
           <tr class="content">
             <th scope="row" class="hour" id="hour9">9AM</th>
-            <td class="task"><input placeholder="Task" id="9" onload="retrieveValue9()"></input></td>
+            <td class="task"><input placeholder="Task" id="9"></input></td>
             <td class="lock" id="lock9"><button class="button" id="button9"><i class="fas fa-calendar-check fa-4x"></i></button></td>
           </tr>
           <tr class="content">
