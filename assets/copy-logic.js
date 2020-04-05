@@ -123,8 +123,158 @@ const addTask9 = (event)=>{
     }    
 }
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('#button9').addEventListener('click', addTask9)
-})
+    document.querySelector('#button9').addEventListener('click', addTask9)})
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$('#edit9').on('click', function(){
+    
+    if (parseInt(input[0].id) < hourTime ){
+        $('#displayText0').replaceWith('<input placeholder="Task" id="9" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[0].id) === hourTime){
+        $('#displayText0').replaceWith('<input placeholder="Task" id="9" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText0').replaceWith('<input placeholder="Task" id="9" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[0].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit10').on('click', function(){
+    
+    if (parseInt(input[1].id) < hourTime ){
+        $('#displayText1').replaceWith('<input placeholder="Task" id="10" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[1].id) === hourTime){
+        $('#displayText1').replaceWith('<input placeholder="Task" id="10" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText1').replaceWith('<input placeholder="Task" id="10" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[1].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit11').on('click', function(){
+    
+    if (parseInt(input[2].id) < hourTime ){
+        $('#displayText2').replaceWith('<input placeholder="Task" id="11" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[2].id) === hourTime){
+        $('#displayText2').replaceWith('<input placeholder="Task" id="11" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText2').replaceWith('<input placeholder="Task" id="11" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[2].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit12').on('click', function(){
+    
+    if (parseInt(input[3].id) < hourTime ){
+        $('#displayText3').replaceWith('<input placeholder="Task" id="12" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[3].id) === hourTime){
+        $('#displayText3').replaceWith('<input placeholder="Task" id="12" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText3').replaceWith('<input placeholder="Task" id="12" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[3].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit13').on('click', function(){
+    
+    if (parseInt(input[4].id) < hourTime ){
+        $('#displayText4').replaceWith('<input placeholder="Task" id="13" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[4].id) === hourTime){
+        $('#displayText4').replaceWith('<input placeholder="Task" id="13" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText4').replaceWith('<input placeholder="Task" id="13" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[4].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit14').on('click', function(){
+    
+    if (parseInt(input[5].id) < hourTime ){
+        $('#displayText5').replaceWith('<input placeholder="Task" id="14" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[5].id) === hourTime){
+        $('#displayText5').replaceWith('<input placeholder="Task" id="14" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText5').replaceWith('<input placeholder="Task" id="14" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[5].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit15').on('click', function(){
+    
+    if (parseInt(input[6].id) < hourTime ){
+        $('#displayText6').replaceWith('<input placeholder="Task" id="15" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[6].id) === hourTime){
+        $('#displayText6').replaceWith('<input placeholder="Task" id="15" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText6').replaceWith('<input placeholder="Task" id="15" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[6].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit16').on('click', function(){
+    
+    if (parseInt(input[7].id) < hourTime ){
+        $('#displayText7').replaceWith('<input placeholder="Task" id="16" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[7].id) === hourTime){
+        $('#displayText7').replaceWith('<input placeholder="Task" id="16" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText7').replaceWith('<input placeholder="Task" id="16" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[7].id))
+    console.log(hourTime)
+}
+)
+
+$('#edit17').on('click', function(){
+    
+    if (parseInt(input[8].id) < hourTime ){
+        $('#displayText8').replaceWith('<input placeholder="Task" id="17" style="background-color: lightslategray; opacity: 50%; width: 100%; height: 100px">')
+    } 
+    else if (parseInt(input[8].id) === hourTime){
+        $('#displayText8').replaceWith('<input placeholder="Task" id="17" style="background-color: red; opacity: 50%; width: 100%; height: 100px">')
+    }
+    else {
+        $('#displayText8').replaceWith('<input placeholder="Task" id="17" style="background-color: green; opacity: 50%; width: 100%; height: 100px">')
+    }
+    console.log(parseInt(input[8].id))
+    console.log(hourTime)
+}
+)
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //10
 const addTask10 = (event)=>{
     event.preventDefault();
@@ -331,29 +481,58 @@ if(arrayData != null){
             //Essentially shown to convert so all PM hours are converted and stored into same measurement standards.
             //Must be displayed within function because a new local variable is being created based off such measures, so simply this function nests all conditional statements
             //To make sure that once noon hits, then 12 is added to each succeeding number to equate properly.
-            function int (){
-                if (interval < 6){
-                    var newInterval = interval + 12
+            function int (){    
+            if (interval < 6) {
+                if (interval + 12 < hourTime){
+                    //Since ID < time, then adding class of 'past' to assure colors are coordinated.
+                    inputData.classList.add("submit-approval-past");
+                }
+                else if (interval + 12 === hourTime) {
+                    //Since ID < time, then adding class of 'past' to assure colors are coordinated.
+                    inputData.classList.add("submit-approval-present");
+                }
+                else {
+                    inputData.classList.add("submit-approval-future");
+                }
             }
-                    //Conditional statement to compare returned value of input to current time. 
-                    //Logic that follows is that IF retrieved value is less than current time, THEN the retrieved value MUST be less conditionally formatted to appropriate color.
-                    if (newInterval < hourTime){
-                        //Since ID < time, then adding class of 'past' to assure colors are coordinated.
-                        inputData.classList.add("submit-approval-past");
-                    }
-                    else if (newInterval === hourTime){
-                        //ID = time, color will therefore be red
-                        inputData.classList.add("submit-approval-present");
-                    }
-                    else {
-                        //ID is greater than time, therefore it is in the future and will be green.
-                        inputData.classList.add("submit-approval-future");
-                    }
-        }
+            else {
+                if (interval < hourTime){
+                    //Since ID < time, then adding class of 'past' to assure colors are coordinated.
+                    inputData.classList.add("submit-approval-past");
+                }
+                else if (interval === hourTime){
+                    //ID = time, color will therefore be red
+                    inputData.classList.add("submit-approval-present");
+                }
+                else {
+                    //ID is greater than time, therefore it is in the future and will be green.
+                    inputData.classList.add("submit-approval-future");
+                }
+
+            }
+            }
+            // //         //Conditional statement to compare returned value of input to current time. 
+            //         //Logic that follows is that IF retrieved value is less than current time, THEN the retrieved value MUST be less conditionally formatted to appropriate color.
+            //         if (newInterval < hourTime){
+            //             //Since ID < time, then adding class of 'past' to assure colors are coordinated.
+            //             inputData.classList.add("submit-approval-past");
+            //         }
+            //         else if (newInterval === hourTime){
+            //             //ID = time, color will therefore be red
+            //             inputData.classList.add("submit-approval-present");
+            //         }
+            //         else {
+            //             //ID is greater than time, therefore it is in the future and will be green.
+            //             inputData.classList.add("submit-approval-future");
+            //         }
+            //     }
         int() 
+
             //Now that Conditional formatting is sufficied, we add class list of 'displayText'
             inputData.classList.add("displayText");
-            //Adds the value of retrieved object to the text box for display within new Div (reference line 45)
+            $(inputData).attr('id', 'displayText'+[i])
+            // inputData.id.add('displaytext'+[i])
+            //Adds the value of retrieved object to the text box for display within new Div
             inputData.textContent = (arrayData[i].planner);
             //Using jQuery to dynamically identify which value is retireved and to find coordinating input value through concatination of for loop variable to replace with new value.
             var test = "#input" + arrayData[i].id;
@@ -387,22 +566,12 @@ closeBtn.addEventListener("click", function(){
 })
 
 // //Adds retrieved string stored to summary sheet in correct time frame.
-// for (var j = 0; j < 9; j++) {
-//         //Calls locally the retrieved items and parses into an object
-//         var taskRAW = JSON.parse(localStorage.getItem('tasks'))
-//         console.log(taskRAW[0].planner)
-//         var task = taskRAW[0].id.substr(-3)
-//             for(var i = 9; i < 18; i++){
-//                 // console.log(document.querySelector("#hour"+[i]).textContent);
-//                 if (taskRAW[j].id.substr(-3) === document.querySelector("#hour"+[i]).textContent){
-//                     // console.log(document.querySelector("#hour9").textContent)
-//                     document.querySelector('#summary'+[i]).textContent += "  " + taskRAW[j].planner
-//                     console.log(document.querySelector('#summary'+[i]).textContent)
-//                     console.log(taskRAW[j].planner)
-//                 }
-//             }
-//         }
-    
+
+
+
+//IN PROGRESS
+
+
 
 
 //Weather API used for dynamic background

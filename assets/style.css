@@ -174,6 +174,7 @@ tbody p {
   border-radius: 15px !important;
 }
 
+
 .time-block{
   text-align: center;
   border-radius: 15px;
@@ -191,20 +192,6 @@ tbody p {
   border-top: 1px dashed #000000;
 }
 
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
 
 .fa-times{
   float: right;
@@ -243,11 +230,6 @@ tbody p {
 }
 
 
-
-
-
-
-
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -266,8 +248,8 @@ tbody p {
   color: rgba(255, 255, 255, 0.8);
   border: 1px solid white !important;
   border-radius: 15px !important;
-  background: rgb(97, 111, 124) !important;
-  opacity: 100%;
+  background: lightslategray !important;
+  opacity: 50%;
   padding: 15px 40px;
   border-radius: 4px;
   font-weight: normal;
@@ -276,13 +258,13 @@ tbody p {
  }
 
  .submit-approval-past:hover {
- background: rgb(9, 1, 51) !important;
+ background: lightslategray !important;
  opacity: 75% !important;
  }
 
  .submit-approval-present {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8)(255, 0, 0) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   background: red !important;
   border: 1px solid white !important;
   border-radius: 15px !important;
@@ -301,10 +283,10 @@ tbody p {
  .submit-approval-future {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  background: rgb(0, 228, 19) !important;
+  background: green !important;
   border: 1px solid white !important;
   border-radius: 15px !important;
-  opacity: 70%;
+  opacity: 50%;
   padding: 15px 40px;
   border-radius: 4px;
   font-weight: normal;
@@ -313,7 +295,7 @@ tbody p {
  }
 
  .submit-approval-future:hover {
-  opacity: 90%;
+  opacity: 70%;
  }
 
 
