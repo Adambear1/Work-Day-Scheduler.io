@@ -577,7 +577,7 @@ closeBtn.addEventListener("click", function(){
 //Weather API used for dynamic background
 function weatherDisplay(lat, lon) {
 //Takes defined lat & long for each used based off their current location & concatinates into variable URL to be used in weather API
-var queryURL = 'http://api.openweathermap.org/data/2.5/find?lat='+ lat + '&lon=' +  lon + '&APPID=79bb7dc0e8f07f6ebe01166410e6e392&APPID=79bb7dc0e8f07f6ebe01166410e6e392'
+var queryURL = 'http://api.openweathermap.org/data/2.5/find?lat='+ lat + '&lon=' +  lon + '&APPID=79bb7dc0e8f07f6ebe01166410e6e392'
 $.ajax({
     url: queryURL,
     method: "GET"
